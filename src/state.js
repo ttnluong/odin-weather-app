@@ -7,8 +7,9 @@ async function getWeatherData(location) {
     );
     const weatherData = await response.json();
     console.log(weatherData);
-    useWeatherData(weatherData);
-    return weatherData;
+    const data = useWeatherData(weatherData);
+    console.log(data);
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -16,13 +17,13 @@ async function getWeatherData(location) {
 
 function useWeatherData(obj) {
   const usedData = {
-    description: obj.currentConditions.conditions,
+    location: obj.address,
+    date: obj.currentConditions.datetimeEpoch,
     temperature: obj.currentConditions.temp,
+    description: obj.currentConditions.conditions,
   };
-
-  console.log(usedData);
 
   return usedData;
 }
 
-export { getWeatherData, useWeatherData };
+export { getWeatherData };
