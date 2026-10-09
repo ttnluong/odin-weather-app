@@ -1,8 +1,5 @@
 import "./styles.css";
-import { addExamples, loadState } from "./state.js";
-import { refresh, attachEvents } from "./events.js";
+import { getWeatherData, useWeatherData, getData } from "./state.js";
 
-loadState();
-addExamples();
-refresh();
-attachEvents();
+getWeatherData("london");
+useWeatherData();
