@@ -80,5 +80,10 @@ body {
   background-color: var(--c-bg-primary);
 }
 
-/* S
+/* 
 ====================================================== */
+
+input,
+button {
+  border: 1px solid black;
+}

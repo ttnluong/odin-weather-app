@@ -6,7 +6,6 @@ async function getWeatherData(location) {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=UDG82QTAUY9NGZYUAFTAGN4WN`,
     );
     const weatherData = await response.json();
-    div.textContent = weatherData.description;
     console.log(weatherData);
     useWeatherData(weatherData);
     return weatherData;
@@ -16,15 +15,14 @@ async function getWeatherData(location) {
 }
 
 function useWeatherData(obj) {
-    const usedData = {
-        description: obj.currentConditions.conditions,
-        temperature: obj.currentConditions.temp,
-    }
+  const usedData = {
+    description: obj.currentConditions.conditions,
+    temperature: obj.currentConditions.temp,
+  };
 
-    console.log(usedData);
+  console.log(usedData);
 
-    return usedData;
+  return usedData;
 }
 
-export { getWeatherData, useWeatherData, getData };
-
+export { getWeatherData, useWeatherData };

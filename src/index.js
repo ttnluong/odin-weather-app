@@ -1,5 +1,6 @@
 import "./styles.css";
-import { getWeatherData, useWeatherData, getData } from "./state.js";
+import { getWeatherData, useWeatherData } from "./state.js";
+import { submitLocation } from "./events.js";
 
 getWeatherData("london");
-useWeatherData();
+submitLocation();
