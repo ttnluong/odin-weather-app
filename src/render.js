@@ -1,17 +1,18 @@
-import { getWeatherData } from "./state.js";
+import { formatDate } from "./state.js";
 
-function displayData() {
+function displayData(obj) {
   const container = document.querySelector("main");
-  const loc = document.createElement("h2");
-  const date = document.createElement("p");
-  const temp = document.createElement("h3");
-  const description = document.createElement("p");
+  const location = document.querySelector(".location");
+  const date = document.querySelector(".date");
+  const temp = document.querySelector(".temp");
+  const description = document.querySelector(".description");
 
-  const data = getWeatherData();
+  location.textContent = obj.location;
+  date.textContent = formatDate(obj);
+  temp.textContent = obj.temperature;
+  description.textContent = obj.description;
 
-  loc.textContent = data.location;
-
-  container.appendChild(loc);
+  container.append(location, date, temp, description);
 }
 
 export { displayData };
