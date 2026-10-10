@@ -28,9 +28,8 @@ function useWeatherData(obj) {
 }
 
 function formatDate(obj) {
-  const timestamp = obj.date;
-  const date = new Date(timestamp);
-  const format = new Intl.DateTimeFormat("en-US", {
+  const date = new Date(obj.date);
+  const format = new Intl.DateTimeFormat("en-GB", {
     timeZone: obj.timezone,
     weekday: "long",
     month: "short",
