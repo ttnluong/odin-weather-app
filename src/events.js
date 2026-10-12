@@ -11,7 +11,7 @@ export function submitLocation() {
     console.log(input);
 
     getWeatherData(input);
-    form.reset();
+    locationForm.reset();
   });
 }
 
