@@ -8,7 +8,7 @@ export async function getWeatherData(location) {
     const json = await response.json();
 
     const data = useWeatherData(json);
-    console.log(json);
+    console.log(data);
     displayData(data);
   } catch (error) {
     console.error(error);
@@ -20,9 +20,15 @@ function useWeatherData(obj) {
     timezone: obj.timezone,
     location: obj.address,
     date: obj.currentConditions.datetimeEpoch,
+    icon: obj.currentConditions.icon,
     temperature: obj.currentConditions.temp,
     description: obj.currentConditions.conditions,
   };
 
   return useData;
+}
+
+export async function getIcon(name) {
+  const icon = await import(`./assets/weather-icons/${name}.svg`);
+  return icon.default;
 }
