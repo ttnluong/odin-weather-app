@@ -1,14 +1,14 @@
 import { displayData } from "./render.js";
 
-async function getWeatherData(location) {
+export async function getWeatherData(location) {
   try {
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=UDG82QTAUY9NGZYUAFTAGN4WN`,
     );
-    const weatherData = await response.json();
+    const json = await response.json();
 
-    const data = useWeatherData(weatherData);
-    console.log(weatherData);
+    const data = useWeatherData(json);
+    console.log(json);
     displayData(data);
   } catch (error) {
     console.error(error);
@@ -26,18 +26,3 @@ function useWeatherData(obj) {
 
   return useData;
 }
-
-function formatDate(obj) {
-  const date = new Date(obj.date);
-  const format = new Intl.DateTimeFormat("en-GB", {
-    timeZone: obj.timezone,
-    weekday: "long",
-    month: "short",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(date);
-  return format;
-}
-
-export { getWeatherData, formatDate };

@@ -1,18 +1,29 @@
-import { formatDate } from "./state.js";
+import { formatDate, capitalizeFirstLetter, formatTemp } from "./util.js";
+
+let tempF;
 
 function displayData(obj) {
+  console.log(obj);
+  console.log(obj.temperature, typeof obj.temperature);
+
   const container = document.querySelector("main");
   const location = document.querySelector(".location");
   const date = document.querySelector(".date");
   const temp = document.querySelector(".temp");
   const description = document.querySelector(".description");
 
-  location.textContent = obj.location;
-  date.textContent = formatDate(obj);
-  temp.textContent = obj.temperature;
+  tempF = obj.temperature;
+
+  location.textContent = capitalizeFirstLetter(obj.location);
+  date.textContent = formatDate(obj.date);
+  temp.textContent = formatTemp(tempF);
   description.textContent = obj.description;
 
   container.append(location, date, temp, description);
 }
 
-export { displayData };
+function updateTemp() {
+  document.querySelector(".temp").textContent = formatTemp(tempF);
+}
+
+export { displayData, updateTemp };

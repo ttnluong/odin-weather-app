@@ -1,6 +1,8 @@
 import { getWeatherData } from "./state.js";
+import { formatTemp } from "./util.js";
+import { updateTemp } from "./render.js";
 
-function submitLocation() {
+export function submitLocation() {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", (e) => {
@@ -13,4 +15,8 @@ function submitLocation() {
   });
 }
 
-export { submitLocation };
+export function toggleUnit() {
+  const unitForm = document.querySelector(".unit-form");
+  const tempText = document.querySelector(".temp");
+  unitForm.addEventListener("change", updateTemp);
+}
