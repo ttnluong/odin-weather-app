@@ -1,5 +1,5 @@
 export function formatDate(obj) {
-  const date = new Date(obj);
+  const date = new Date(obj * 1000);
   const format = new Intl.DateTimeFormat("en-GB", {
     timeZone: obj.timezone,
     weekday: "long",

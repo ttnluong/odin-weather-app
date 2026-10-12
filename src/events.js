@@ -17,6 +17,5 @@ export function submitLocation() {
 
 export function toggleUnit() {
   const unitForm = document.querySelector(".unit-form");
-  const tempText = document.querySelector(".temp");
   unitForm.addEventListener("change", updateTemp);
 }

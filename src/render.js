@@ -2,7 +2,7 @@ import { formatDate, capitalizeFirstLetter, formatTemp } from "./util.js";
 
 let tempF;
 
-function displayData(obj) {
+export function displayData(obj) {
   console.log(obj);
   console.log(obj.temperature, typeof obj.temperature);
 
@@ -22,8 +22,6 @@ function displayData(obj) {
   container.append(location, date, temp, description);
 }
 
-function updateTemp() {
+export function updateTemp() {
   document.querySelector(".temp").textContent = formatTemp(tempF);
 }
-
-export { displayData, updateTemp };
