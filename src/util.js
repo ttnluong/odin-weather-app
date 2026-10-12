@@ -15,8 +15,8 @@ export function capitalizeFirstLetter(str) {
   return str[0].toUpperCase() + str.slice(1);
 }
 
-export function formatTemp(f) {
+export function formatTemp(c) {
   const unit = document.querySelector("input[name='unit']:checked").value;
-  const value = unit === "C" ? ((f - 32) * 5) / 9 : f;
+  const value = unit === "F" ? (c * 9) / 5 + 32 : c;
   return `${Math.round(value)}°${unit}`;
 }

@@ -3,7 +3,7 @@ import { displayData } from "./render.js";
 export async function getWeatherData(location) {
   try {
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=UDG82QTAUY9NGZYUAFTAGN4WN`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&key=UDG82QTAUY9NGZYUAFTAGN4WN`,
     );
     const json = await response.json();
 

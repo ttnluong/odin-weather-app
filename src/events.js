@@ -3,9 +3,9 @@ import { formatTemp } from "./util.js";
 import { updateTemp } from "./render.js";
 
 export function submitLocation() {
-  const form = document.querySelector("form");
+  const locationForm = document.querySelector(".location-form");
 
-  form.addEventListener("submit", (e) => {
+  locationForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const input = document.getElementById("input-location").value;
     console.log(input);

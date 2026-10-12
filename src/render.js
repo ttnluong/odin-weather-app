@@ -1,6 +1,6 @@
 import { formatDate, capitalizeFirstLetter, formatTemp } from "./util.js";
 
-let tempF;
+let tempC;
 
 export function displayData(obj) {
   console.log(obj);
@@ -12,16 +12,16 @@ export function displayData(obj) {
   const temp = document.querySelector(".temp");
   const description = document.querySelector(".description");
 
-  tempF = obj.temperature;
+  tempC = obj.temperature;
 
   location.textContent = capitalizeFirstLetter(obj.location);
   date.textContent = formatDate(obj.date);
-  temp.textContent = formatTemp(tempF);
+  temp.textContent = formatTemp(tempC);
   description.textContent = obj.description;
 
   container.append(location, date, temp, description);
 }
 
 export function updateTemp() {
-  document.querySelector(".temp").textContent = formatTemp(tempF);
+  document.querySelector(".temp").textContent = formatTemp(tempC);
 }
