@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { formatDate, capitalizeFirstLetter, formatTemp } from "./util.js";
 import { getIcon } from "./state.js";
 
@@ -26,3 +27,22 @@ async function displayIcon(name) {
 export function updateTemp() {
   document.querySelector(".temp").textContent = formatTemp(tempC);
 }
+=======
+import { getWeatherData } from "./state.js";
+
+function displayData() {
+  const container = document.querySelector("main");
+  const loc = document.createElement("h2");
+  const date = document.createElement("p");
+  const temp = document.createElement("h3");
+  const description = document.createElement("p");
+
+  const data = getWeatherData();
+
+  loc.textContent = data.location;
+
+  container.appendChild(loc);
+}
+
+export { displayData };
+>>>>>>> b82a2c409d52211fc4d60e7758fcc6ac6116763a
