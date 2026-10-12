@@ -11,10 +11,6 @@ export function formatDate(obj) {
   return format;
 }
 
-export function capitalizeFirstLetter(str) {
-  return str[0].toUpperCase() + str.slice(1);
-}
-
 export function formatTemp(c) {
   const unit = document.querySelector("input[name='unit']:checked").value;
   const value = unit === "F" ? (c * 9) / 5 + 32 : c;
