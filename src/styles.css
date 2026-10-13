@@ -175,7 +175,7 @@ header {
 ====================================================== */
 
 .widget {
-  padding: 16px;
+  padding: 24px 16px;
   border-radius: 20px;
   border: 1px solid black;
 }
@@ -184,11 +184,22 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
 }
 
 .weather-conditions {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  height: 200px;
+}
+
+.temp {
+  padding: 16px;
+  font-size: 40px;
 }
 
 .description {
