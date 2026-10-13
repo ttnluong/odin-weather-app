@@ -91,7 +91,7 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   width: 400px;
 }
 
@@ -102,7 +102,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 12px;
+  padding: 16px;
+  border-radius: 20px;
   border: 1px solid black;
 }
 
@@ -156,18 +157,26 @@ header {
 
 .location-form {
   display: flex;
-  gap: 20px;
+  gap: 12px;
 }
 
 .location-input {
   flex-grow: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.location-form button {
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
 /* WIDGET
 ====================================================== */
 
 .widget {
-  padding: 12px;
+  padding: 16px;
+  border-radius: 20px;
   border: 1px solid black;
 }
 
