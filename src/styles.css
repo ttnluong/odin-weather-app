@@ -110,12 +110,24 @@ body {
   flex-grow: 1;
 }
 
-/* 
+/* WIDGET
 ====================================================== */
 
 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.weather-conditions {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+}
 
 input,
 button {
