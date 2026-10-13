@@ -6,7 +6,7 @@ Project from [The Odin Project](https://www.theodinproject.com/lessons/node-path
 
 ## Live Demo
 
-[View Demo](https://ttnluong.github.io/odin-todo-list/)
+[View Demo](https://ttnluong.github.io/odin-weather-app/)
 
 ## Features
 
