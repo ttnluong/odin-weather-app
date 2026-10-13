@@ -6,29 +6,33 @@
     <title>Weather App</title>
   </head>
   <body> 
-    <header>
-      <form class="location-form">
-        <div class="form-content">
-            <label for="input-location">Location</label>
-            <input type="text" id="input-location" name="location">
-        </div>
-        <button type="submit" id="submit">Enter</button>
-      </form>
-      <form class="unit-form">
-        <label><input type="radio" name="unit" value="C" checked /> °C</label>
-        <label><input type="radio" name="unit" value="F" /> °F</label>
-      </form>
-    </header>
-    <main>
-      <div class="info">
-        <h2 class="location"></h2>
-        <p class="date"></p>
+    <div class="container">
+      <div class="app">
+        <header>
+          <div class="header-top">
+            <h1>weather</h1>
+            <form class="unit-form">
+              <label><input type="radio" name="unit" value="C" checked /> °C</label>
+              <label><input type="radio" name="unit" value="F" /> °F</label>
+            </form>
+          </div>
+          <form class="location-form">
+            <input class="location-input" type="text" id="input-location" name="location">
+            <button type="submit" id="submit">Enter</button>
+          </form>
+        </header>
+        <main>
+          <div class="info">
+            <h2 class="location"></h2>
+            <p class="date"></p>
+          </div>
+          <div class="weather-data">
+            <img class="icon">
+            <h3 class="temp"></h3>
+            <p class="description"></p>
+          </div>
+        </main>
       </div>
-      <div class="weather-data">
-        <img class="icon">
-        <h3 class="temp"></h3>
-        <p class="description"></p>
-      </div>
-    </main>
+    </div>
   </body>
 </html>
