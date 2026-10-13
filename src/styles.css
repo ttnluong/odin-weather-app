@@ -111,7 +111,6 @@ header {
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 8px 4px rgba(255, 255, 255, 0.4);
 }
 
 .header-top {
@@ -182,14 +181,24 @@ header {
   flex-grow: 1;
   padding: 6px 10px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.19);
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(33px);
   -webkit-backdrop-filter: blur(33px);
+}
+
+.location-input::placeholder {
+  font-size: 14px;
+  color: hsl(260, 18%, 93%);
+}
+
+.location-input:focus {
+  outline: none;
 }
 
 .location-form button {
   padding: 6px 10px;
   border-radius: 8px;
+  font-size: 15px;
   background-color: rgb(44, 85, 161);
   color: #fff;
 }
