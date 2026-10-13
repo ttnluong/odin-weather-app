@@ -89,15 +89,26 @@ body {
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 400px;
-  border: 1px solid black;
 }
 
 /* HEADER
 ====================================================== */
 
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid black;
+}
+
 .header-top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -112,6 +123,11 @@ body {
 
 /* WIDGET
 ====================================================== */
+
+.widget {
+  padding: 12px;
+  border: 1px solid black;
+}
 
 .info {
   display: flex;
