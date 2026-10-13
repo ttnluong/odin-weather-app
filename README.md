@@ -1,8 +1,8 @@
 # Todo List
 
-A simple browser-based task manager built with vanilla JavaScript, HTML, and CSS, created as part of The Odin Project curriculum.
+A simple browser-based weather forecast built with vanilla JavaScript, HTML, and CSS, created as part of The Odin Project curriculum.
 
-Project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-todo-list) — JavaScript course.
+Project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) — JavaScript course.
 
 ## Live Demo
 
@@ -10,23 +10,21 @@ Project from [The Odin Project](https://www.theodinproject.com/lessons/node-path
 
 ## Features
 
-- Projects: create, edit and delete color-coded projects
-- Views: built in filters
-- Tasks: overview with inline quick add and click to rename
-- Checklists: per task with progress shown
-- Color-coded status: due date and priority
+- Search for a location and fetch its weather data
+- Toggle the temperature between °C and °F
+- Weather icon matching the current conditions
 
 ## Tech Stack
 
 - HTML5 / CSS3
 - Vanilla JavaScript (ES modules)
 - Webpack
+- Visual Crossing Weather API
 
 ## Concepts Practiced
 
-- Splitting app into data, rendering and events layers
-- Delegated event listeners
-- Spread operators
-- Nullish coalescing (??) and logical OR (||)
-- Commit guard to avoid duplicates
-- Using localstorage
+- Working with asynchronous JavaScript (promises and async/await)
+- Fetching and processing JSON from a third-party API
+- Splitting code into modules
+- Dynamic imports with Webpack for bundling many assets
+- Building an accessible unit toggle with radio inputs
