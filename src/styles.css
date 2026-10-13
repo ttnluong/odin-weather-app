@@ -13,12 +13,12 @@
 ====================================================== */
 
 :root {
-  --c-danger-red: hsl(357 53% 60%);
-
   --c-accent-red: hsl(4, 85%, 63%);
   --c-accent-orange: hsl(40, 100%, 49%);
   --c-accent-lime: hsl(84, 54%, 46%);
   --c-accent-blue: hsl(216, 81%, 60%);
+
+  
 }
 
 /* NORMALISE
@@ -76,7 +76,7 @@ body {
   height: 100vh;
   font-family: "Inter Variable";
   font-weight: 350;
-  color: var(--c-text-default);
+  color: #fff;
   background-color: cornflowerblue;;
 }
 
@@ -121,7 +121,18 @@ header {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(23.1% 39.6% 70.2%);
+  background-image: radial-gradient(
+    circle at 10% 10%,
+    rgb(23.1% 39.6% 70.2%) 14%,
+    #1d7d78 41%,
+    #257385 75%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .unit-form {
@@ -203,10 +214,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: hsl(253, 29%, 91%);
 }
 
 .location {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .weather-conditions {
