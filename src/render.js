@@ -16,6 +16,14 @@ export function displayData(obj) {
   temp.textContent = formatTemp(tempC);
   description.textContent = obj.description;
   displayIcon(obj.icon);
+
+  const wind = document.querySelector(".wind");
+  const humidity = document.querySelector(".humidity");
+  const feelslike = document.querySelector(".feelslike");
+
+  wind.textContent = obj.wind;
+  humidity.textContent = obj.humidity;
+  feelslike.textContent = obj.feelslike;
 }
 
 async function displayIcon(name) {

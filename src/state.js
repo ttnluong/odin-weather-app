@@ -23,6 +23,9 @@ function useWeatherData(obj) {
     icon: obj.currentConditions.icon,
     temperature: obj.currentConditions.temp,
     description: obj.currentConditions.conditions,
+    wind: obj.currentConditions.windspeed,
+    humidity: obj.currentConditions.humidity,
+    feelslike: obj.currentConditions.feelslike,
   };
 
   return useData;
