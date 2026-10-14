@@ -16,3 +16,7 @@ export function formatTemp(c) {
   const value = unit === "F" ? (c * 9) / 5 + 32 : c;
   return `${Math.round(value)}°${unit}`;
 }
+
+export function roundToInteger(value) {
+  return Math.round(value);
+}

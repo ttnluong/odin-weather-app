@@ -1,4 +1,4 @@
-import { formatDate, formatTemp } from "./util.js";
+import { formatDate, formatTemp, roundToInteger } from "./util.js";
 import { getIcon } from "./state.js";
 
 let tempC;
@@ -24,8 +24,8 @@ export function displayData(obj) {
 
   tempFeelC = obj.feelslike;
 
-  wind.textContent = obj.wind;
-  humidity.textContent = obj.humidity;
+  wind.textContent = `${roundToInteger(obj.wind)} km/h`;
+  humidity.textContent = `${roundToInteger(obj.humidity)}%`;
   feelslike.textContent = formatTemp(tempFeelC);
 }
 
