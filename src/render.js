@@ -2,6 +2,7 @@ import { formatDate, formatTemp } from "./util.js";
 import { getIcon } from "./state.js";
 
 let tempC;
+let tempFeelC;
 
 export function displayData(obj) {
   const location = document.querySelector(".location");
@@ -21,9 +22,11 @@ export function displayData(obj) {
   const humidity = document.querySelector(".humidity");
   const feelslike = document.querySelector(".feelslike");
 
+  tempFeelC = obj.feelslike;
+
   wind.textContent = obj.wind;
   humidity.textContent = obj.humidity;
-  feelslike.textContent = obj.feelslike;
+  feelslike.textContent = formatTemp(tempFeelC);
 }
 
 async function displayIcon(name) {
@@ -33,4 +36,5 @@ async function displayIcon(name) {
 
 export function updateTemp() {
   document.querySelector(".temp").textContent = formatTemp(tempC);
+  document.querySelector(".feelslike").textContent = formatTemp(tempFeelC);
 }
